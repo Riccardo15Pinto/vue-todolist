@@ -5,53 +5,51 @@ console.log('ok vue', Vue);
 const app = Vue.createApp({
     data(){
         return{
+            newGoals: '',
             listGoals :[
             {
                 text : 'Imposta la sveglia',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Svegliati',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Lavati',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Accendi il Pc',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Segui la lezione',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Fai l\'esercizio',
-                done : 'false'
+                done : false
             },
             {
                 text : 'Ripeti',
-                done : 'false'
+                done : false
             }
             ]
         }
     },
 
-    computed:{
-        myGoals(){
-          return this.listGoals.filter( goal => goal.text && goal.done);
-        }
-    },
-
     methods:{
         isTrue(target){
-            if(this.listGoals[target].done === 'false') this.listGoals[target].done ='true';
-            else this.listGoals[target].done = 'false';
+            this.listGoals[target].done = !this.listGoals[target].done
         },  
 
         deleteGoals(index){
-            this.myGoals.splice(index, 1);
+           this.listGoals.splice(index, 1);
+        },
+
+        addnewGoals(){
+            this.listGoals.push({text : this.newGoals , done: false});
         }
 
     }
