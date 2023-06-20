@@ -20,7 +20,7 @@
                     <h2>Cose da fare:</h2>
                 </div>
                 <ul>
-                    <li v-for="(goal, i) in goals" @click="isTrue(i)">
+                    <li v-for="(goal, i) in myGoals" @click="isTrue(i)">
                         <span :class="{'do-it': goal.done === 'true'}">{{goal.text}}</span>
                         <i class="fa-regular fa-circle-xmark"></i>
                     </li>
