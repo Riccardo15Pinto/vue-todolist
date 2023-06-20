@@ -15,17 +15,22 @@
 <body>
     <main>
         <div id="root">
+            <!-- card to do -->
             <div class="card">
+                <!-- card header / title -->
                 <div class="card-header">
                     <h2>Cose da fare:</h2>
                 </div>
+                <!-- if all to do goals are empty -->
                 <h3 v-if="listGoals.length === 0">Hai terminato tutti gli obbiettivi </h3>
+                <!-- card body and goals -->
                 <ul>
                     <li v-for="(goal, i) in listGoals">
                         <span :class="{'do-it': goal.done }" @click="isTrue(i)">{{goal.text}}</span>
                         <i class="fa-regular fa-circle-xmark" @click="deleteGoals(i)"></i>
                     </li>
                 </ul>
+                <!-- card footer / title / input groups -->
                 <div class="card-footer">
                     <div class="card-header ">
                         <h3>Se ti viene in mente altro...</h3>
