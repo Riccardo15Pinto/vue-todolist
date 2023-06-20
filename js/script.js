@@ -49,7 +49,11 @@ const app = Vue.createApp({
         },
 
         addnewGoals(){
-            this.listGoals.push({text : this.newGoals , done: false});
+            if(this.newGoals.length > 0){
+                this.listGoals.push({text : this.newGoals , done: false});
+            }
+
+            this.newGoals = '';
         }
 
     }
