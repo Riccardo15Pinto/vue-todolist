@@ -22,7 +22,7 @@
                 <ul>
                     <li v-for="(goal, i) in myGoals" @click="isTrue(i)">
                         <span :class="{'do-it': goal.done === 'true'}">{{goal.text}}</span>
-                        <i class="fa-regular fa-circle-xmark"></i>
+                        <i class="fa-regular fa-circle-xmark" @click="deleteGoal"></i>
                     </li>
                 </ul>
                 <div class="card-footer">
