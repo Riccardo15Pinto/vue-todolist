@@ -1,0 +1,82 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genereics */
+
+body{
+    font-family: sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main*/
+
+#root{
+    width: 500px;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.card-header{
+    text-align: center;
+    padding: 10px;
+}
+
+.card-footer{
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+.card li {
+    border-top: 1px solid black;
+    list-style: none;
+    padding: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer input{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 75%;
+}
+
+.card-footer button{
+    padding: 17px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+
+/*Utility*/
+
+.do-it{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- my style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="root">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Cose da fare:</h2>
+                </div>
+                <ul>
+                    <li v-for="(goal, i) in goals" @click="isTrue(i)">
+                        <span :class="{'do-it': goal.done === 'true'}">{{goal.text}}</span>
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <div class="card-header ">
+                        <h3>Se ti viene in mente altro...</h3>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" placeholder="Inserisci altri obbiettivi">
+                        <button>Aggiungi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- my javascript  -->
+    <script src="js/script.js"></script>
+</body>
+</html>
