@@ -38,6 +38,12 @@ const app = Vue.createApp({
         }
     },
 
+    computed:{
+        myGoals(){
+          return this.goals.filter( goal => goal.text && goal.done);
+        }
+    },
+
     methods:{
         isTrue(target){
             if(this.goals[target].done === 'false') this.goals[target].done ='true';
