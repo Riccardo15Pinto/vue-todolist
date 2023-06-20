@@ -50,8 +50,8 @@ const app = Vue.createApp({
             else this.listGoals[target].done = 'false';
         },  
 
-        deleteGoals(target){
-            this.myGoals.splice(target, 1);
+        deleteGoals(index){
+            this.myGoals.splice(index, 1);
         }
 
     }
